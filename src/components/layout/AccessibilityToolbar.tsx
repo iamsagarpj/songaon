@@ -11,8 +11,7 @@ export function AccessibilityToolbar() {
 
   const toolbar = (
     <div
-      className="fixed bottom-[calc(7.25rem+env(safe-area-inset-bottom,0px))] lg:bottom-6 right-3 sm:right-4 z-[110]"
-      style={{ transform: 'translateZ(0)' }}
+      className="fixed bottom-[calc(8.75rem+env(safe-area-inset-bottom,0px))] lg:bottom-6 right-3 sm:right-4 z-[110]"
     >
       {open && (
         <div

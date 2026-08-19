@@ -71,7 +71,7 @@ export function HomePage() {
       <section className="py-10 md:py-14">
         <div className="max-w-page mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
           <SectionHeader title={t('sections.announcements')} viewAllLink="/announcements" />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {announcements.map((a) => (
               <AnnouncementCard key={a.id} announcement={a} />
             ))}

@@ -1,8 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { BottomNav } from './BottomNav';
-import { MobileContactBar } from './MobileContactBar';
+import { MobileDock } from './MobileDock';
 import { AccessibilityToolbar } from './AccessibilityToolbar';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -10,7 +9,7 @@ export function Layout() {
   const { language } = useLanguage();
 
   return (
-    <div className="min-h-screen flex flex-col bg-charcoal-50">
+    <div className="min-h-screen flex flex-col bg-charcoal-50 overflow-x-clip">
       <a href="#main-content" className="skip-link">
         {language === 'mr' ? 'मुख्य माहितीकडे जा' : 'Skip to main content'}
       </a>
@@ -19,8 +18,7 @@ export function Layout() {
         <Outlet />
       </main>
       <Footer />
-      <MobileContactBar />
-      <BottomNav />
+      <MobileDock />
       <AccessibilityToolbar />
     </div>
   );

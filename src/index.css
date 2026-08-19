@@ -13,8 +13,30 @@
     @apply font-sans text-charcoal-800 bg-charcoal-50 antialiased;
     font-size: 1rem;
     line-height: 1.65;
-    overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
+  }
+
+  #root {
+    min-height: 100%;
+    overflow-x: clip;
+  }
+
+  /* Fixed mobile dock — outside #root so filters/overflow cannot break stickiness */
+  #mobile-dock {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  @media (min-width: 1024px) {
+    #mobile-dock {
+      display: none;
+    }
   }
 
   @media (max-width: 767px) {
@@ -59,7 +81,7 @@
   }
 
   .mobile-main-pad {
-    @apply pb-[calc(7.5rem+env(safe-area-inset-bottom,0px))] lg:pb-0;
+    @apply pb-[calc(8.75rem+env(safe-area-inset-bottom,0px))] lg:pb-0;
   }
 
   .mobile-footer-pad {
@@ -78,18 +100,18 @@
 }
 
 
-body.high-contrast {
+#root.high-contrast {
   filter: contrast(1.25);
   @apply bg-white text-black;
 }
 
-body.high-contrast .bg-primary-600,
-body.high-contrast .bg-primary-700,
-body.high-contrast .bg-primary-800 {
+#root.high-contrast .bg-primary-600,
+#root.high-contrast .bg-primary-700,
+#root.high-contrast .bg-primary-800 {
   background-color: #000 !important;
 }
 
-body.high-contrast a {
+#root.high-contrast a {
   text-decoration: underline;
 }
 
