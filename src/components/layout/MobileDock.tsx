@@ -63,7 +63,7 @@ export function MobileDock() {
 
       {/* Bottom navigation */}
       <nav aria-label="Bottom navigation" className="bg-white border-t border-charcoal-100 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] rounded-t-2xl">
-        <div className="flex items-stretch max-w-page mx-auto px-1 pt-1">
+        <div className="flex items-stretch w-full px-1 pt-1">
           {navItems.map(({ key, path, icon: Icon }) => {
             const active = location.pathname === path || (path !== '/' && location.pathname.startsWith(path));
             return (

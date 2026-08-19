@@ -7,6 +7,7 @@
     font-size: 100%;
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    width: 100%;
   }
 
   body {
@@ -14,9 +15,11 @@
     font-size: 1rem;
     line-height: 1.65;
     -webkit-tap-highlight-color: transparent;
+    width: 100%;
   }
 
   #root {
+    width: 100%;
     min-height: 100%;
     overflow-x: clip;
   }
@@ -69,7 +72,7 @@
 
 @layer components {
   .page-container {
-    @apply max-w-page mx-auto px-4 xs:px-4 sm:px-5 md:px-6 lg:px-8 w-full;
+    @apply w-full mx-auto px-4 xs:px-4 sm:px-5 md:px-6 lg:px-8 xl:px-10 2xl:px-12 3xl:px-16;
   }
 
   .section-padding {

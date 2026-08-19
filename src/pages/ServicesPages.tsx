@@ -30,7 +30,7 @@ export function FormsPage() {
     <>
       <SEO title={language === 'mr' ? 'नागरिकांसाठी फॉर्म' : 'Citizen Forms'} path="/forms" />
       <PageHeader title={language === 'mr' ? 'नागरिकांसाठी फॉर्म' : 'Citizen Forms'} subtitle={t('common.sampleData')} />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-2 gap-4">
+      <div className="page-container py-10 grid md:grid-cols-2 gap-4">
         {forms.map((f) => (
           <Card key={f.id} id={f.slug}>
             <span className="text-xs font-medium text-primary-600">{getLocalized(f.category, language)}</span>
@@ -56,7 +56,7 @@ export function ContactPage() {
     <>
       <SEO title={t('nav.contact')} path="/contact" />
       <PageHeader title={language === 'mr' ? 'संपर्क करा' : 'Contact Us'} />
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-2 gap-6">
+      <div className="page-container py-10 grid md:grid-cols-2 gap-6">
         <Card className="space-y-4">
           <h2 className="text-xl font-bold">{language === 'mr' ? `ग्रामपंचायत ${name}` : `Gram Panchayat ${name}`}</h2>
           <div className="flex gap-3"><MapPin className="w-5 h-5 text-primary-600 flex-shrink-0" /><p>{name}, {getLocalized(village.taluka, language)}, {getLocalized(village.district, language)} — {village.pincode}</p></div>

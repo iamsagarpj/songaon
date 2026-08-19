@@ -25,7 +25,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-charcoal-100 shadow-sm safe-area-top">
-      <div className="max-w-page mx-auto px-4 sm:px-5 md:px-6">
+      <div className="page-container">
         <div className="flex items-center justify-between gap-2 min-h-[60px] sm:min-h-[64px] lg:min-h-[72px]">
           <Link to="/" className="flex items-center gap-3 min-w-0 flex-1">
             <div className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center shadow-md ring-2 ring-primary-100">

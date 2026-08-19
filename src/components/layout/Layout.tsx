@@ -9,7 +9,7 @@ export function Layout() {
   const { language } = useLanguage();
 
   return (
-    <div className="min-h-screen flex flex-col bg-charcoal-50 overflow-x-clip">
+    <div className="min-h-screen w-full flex flex-col bg-charcoal-50 overflow-x-clip">
       <a href="#main-content" className="skip-link">
         {language === 'mr' ? 'मुख्य माहितीकडे जा' : 'Skip to main content'}
       </a>

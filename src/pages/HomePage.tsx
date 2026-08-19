@@ -69,7 +69,7 @@ export function HomePage() {
       </section>
 
       <section className="py-10 md:py-14">
-        <div className="max-w-page mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
+        <div className="page-container">
           <SectionHeader title={t('sections.announcements')} viewAllLink="/announcements" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {announcements.map((a) => (
@@ -80,7 +80,7 @@ export function HomePage() {
       </section>
 
       <section className="py-10 md:py-14 bg-primary-50">
-        <div className="max-w-page mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
+        <div className="page-container">
           <div className="flex items-center gap-3 mb-6">
             <Megaphone className="w-8 h-8 text-primary-600" aria-hidden="true" />
             <h2 className="text-2xl md:text-3xl font-bold text-charcoal-800">{t('sections.noticeBoard')}</h2>
@@ -105,14 +105,14 @@ export function HomePage() {
       </section>
 
       <section className="py-10 md:py-14">
-        <div className="max-w-page mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
+        <div className="page-container">
           <SectionHeader title={t('sections.villageGlance')} viewAllLink="/about" />
           <VillageStats />
         </div>
       </section>
 
       <section className="py-10 md:py-14 bg-white">
-        <div className="max-w-page mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
+        <div className="page-container">
           <SectionHeader title={t('sections.schemes')} viewAllLink="/schemes" />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {schemes.map((s) => <SchemeCard key={s.id} scheme={s} />)}
@@ -121,7 +121,7 @@ export function HomePage() {
       </section>
 
       <section className="py-10 md:py-14 bg-charcoal-50">
-        <div className="max-w-page mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
+        <div className="page-container">
           <SectionHeader title={t('sections.projects')} viewAllLink="/projects" />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((p) => <ProjectCard key={p.id} project={p} />)}
@@ -130,7 +130,7 @@ export function HomePage() {
       </section>
 
       <section className="py-10 md:py-14">
-        <div className="max-w-page mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
+        <div className="page-container">
           <SectionHeader title={t('sections.events')} viewAllLink="/events" />
           <div className="grid md:grid-cols-3 gap-4">
             {events.map((e) => (
@@ -145,7 +145,7 @@ export function HomePage() {
       </section>
 
       <section className="py-10 md:py-14 bg-white">
-        <div className="max-w-page mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
+        <div className="page-container">
           <SectionHeader title={t('sections.news')} viewAllLink="/news" />
           <div className="grid md:grid-cols-2 gap-4">
             {news.map((n) => (
@@ -162,7 +162,7 @@ export function HomePage() {
       </section>
 
       <section className="py-10 md:py-14 bg-charcoal-50">
-        <div className="max-w-page mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
+        <div className="page-container">
           <SectionHeader title={t('sections.gallery')} viewAllLink="/gallery" />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {gallery.map((g) => (
@@ -180,7 +180,7 @@ export function HomePage() {
       </section>
 
       <section className="py-10 md:py-14">
-        <div className="max-w-page mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
+        <div className="page-container">
           <SectionHeader title={t('sections.emergency')} />
           <EmergencyContacts contacts={emergency} />
         </div>

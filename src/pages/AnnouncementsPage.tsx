@@ -87,7 +87,7 @@ export function FacilitiesPage() {
     <>
       <SEO title={language === 'mr' ? 'गावातील सुविधा' : 'Village Facilities'} path="/facilities" />
       <PageHeader title={t('sections.facilities')} />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 space-y-6">
+      <div className="page-container py-10 space-y-6">
         <div className="flex flex-wrap gap-2">
           <button onClick={() => setFilter('all')} className={`px-4 py-2 rounded-full text-sm font-medium ${filter === 'all' ? 'bg-primary-600 text-white' : 'bg-charcoal-100'}`}>
             {language === 'mr' ? 'सर्व' : 'All'}
