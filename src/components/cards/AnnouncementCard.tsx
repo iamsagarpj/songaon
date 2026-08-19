@@ -10,26 +10,28 @@ export function AnnouncementCard({ announcement }: { announcement: Announcement 
   const { t, language } = useLanguage();
 
   return (
-    <Card hover className="h-full flex flex-col">
-      <div className="flex items-start justify-between gap-2 mb-2">
-        <div className="flex items-center gap-2 flex-wrap">
-          <StatusBadge status={announcement.status} />
+    <Card hover className="h-full flex flex-col min-w-0 overflow-hidden">
+      <div className="flex flex-col gap-2 mb-2 min-w-0">
+        <div className="flex flex-wrap items-center gap-2 min-w-0">
+          <StatusBadge status={announcement.status} className="max-w-full" />
           {announcement.pinned && (
             <span className="inline-flex items-center gap-1 text-xs text-primary-600 font-medium">
-              <Pin className="w-3 h-3" aria-hidden="true" />
+              <Pin className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
               {language === 'mr' ? 'पिन' : 'Pinned'}
             </span>
           )}
         </div>
-        <time className="text-sm text-charcoal-400 whitespace-nowrap">{formatDate(announcement.date, language)}</time>
+        <time className="text-xs sm:text-sm text-charcoal-400 break-words">
+          {formatDate(announcement.date, language)}
+        </time>
       </div>
-      <span className="text-xs font-medium text-primary-600 mb-1">
+      <span className="text-xs font-medium text-primary-600 mb-1 break-words">
         {getLocalized(announcement.category, language)}
       </span>
-      <h3 className="text-lg font-bold text-charcoal-800 mb-2 leading-snug">
+      <h3 className="text-lg font-bold text-charcoal-800 mb-2 leading-snug break-words">
         {getLocalized(announcement.title, language)}
       </h3>
-      <p className="text-charcoal-600 text-sm flex-1 mb-4">
+      <p className="text-charcoal-600 text-sm flex-1 mb-4 break-words">
         {getLocalized(announcement.description, language)}
       </p>
       <Link

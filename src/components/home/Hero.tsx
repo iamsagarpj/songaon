@@ -18,12 +18,12 @@ export function Hero() {
         fetchPriority="high"
         decoding="async"
       />
-      <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-primary-900/95 via-primary-800/85 to-primary-700/50" />
+      <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-primary-900/95 via-primary-800/88 to-primary-600/40" />
       <div className="relative page-container py-10 sm:py-14 md:py-16 w-full">
-        <p className="text-white/80 text-sm sm:text-base font-medium mb-2">
+        <p className="text-white/85 text-sm sm:text-base font-medium mb-2 drop-shadow-sm">
           {language === 'mr' ? 'ग्रामपंचायत' : 'Gram Panchayat'} {villageName} · {language === 'mr' ? village.district.mr : village.district.en}
         </p>
-        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold text-white leading-tight max-w-3xl mb-3 sm:mb-4">
+        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold text-white leading-tight max-w-3xl mb-3 sm:mb-4 drop-shadow-md">
           {t('hero.title')}
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mb-6 sm:mb-8 leading-relaxed">

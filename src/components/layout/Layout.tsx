@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { BottomNav } from './BottomNav';
+import { MobileContactBar } from './MobileContactBar';
 import { AccessibilityToolbar } from './AccessibilityToolbar';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -18,6 +19,7 @@ export function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <MobileContactBar />
       <BottomNav />
       <AccessibilityToolbar />
     </div>

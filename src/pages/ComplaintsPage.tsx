@@ -138,21 +138,21 @@ export function ComplaintTrackPage() {
 
         {complaint && (
           <div className="bg-white p-6 rounded-card-lg border space-y-4">
-            <div className="flex justify-between items-start">
-              <div>
-                <p className="font-bold text-lg">{complaint.number}</p>
-                <time className="text-sm text-charcoal-500">{formatDate(complaint.date, language)}</time>
+            <div className="flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-start min-w-0">
+              <div className="min-w-0">
+                <p className="font-bold text-lg break-words">{complaint.number}</p>
+                <time className="text-xs sm:text-sm text-charcoal-500 break-words">{formatDate(complaint.date, language)}</time>
               </div>
-              <StatusBadge status={complaint.status} />
+              <StatusBadge status={complaint.status} className="self-start shrink-0" />
             </div>
             <p><strong>{getLocalized(complaint.category, language)}</strong> — {complaint.location}</p>
             <p className="text-charcoal-600">{complaint.description}</p>
             <div className="border-t pt-4">
               <h3 className="font-semibold mb-2">{language === 'mr' ? 'अद्यतने' : 'Updates'}</h3>
               {complaint.updates.map((u, i) => (
-                <div key={i} className="flex gap-3 mb-2">
-                  <time className="text-sm text-charcoal-400">{formatDate(u.date, language)}</time>
-                  <p className="text-sm">{getLocalized(u.message, language)}</p>
+                <div key={i} className="flex flex-col xs:flex-row xs:gap-3 gap-1 mb-2 min-w-0">
+                  <time className="text-xs sm:text-sm text-charcoal-400 shrink-0">{formatDate(u.date, language)}</time>
+                  <p className="text-sm break-words min-w-0">{getLocalized(u.message, language)}</p>
                 </div>
               ))}
             </div>

@@ -57,9 +57,9 @@ export function AnnouncementDetailPage() {
       <SEO title={title} path={`/announcements/${id}`} />
       <PageHeader title={title} />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
-        <div className="flex items-center gap-3 mb-4">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
           <StatusBadge status={item.status} />
-          <time className="text-charcoal-500">{formatDate(item.date, language)}</time>
+          <time className="text-xs sm:text-sm text-charcoal-500 break-words">{formatDate(item.date, language)}</time>
         </div>
         <p className="text-lg text-charcoal-700 leading-relaxed mb-6">{getLocalized(item.content, language)}</p>
         <ShareButton title={title} />

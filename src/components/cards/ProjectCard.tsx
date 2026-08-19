@@ -92,9 +92,9 @@ export function ProjectCardDetailed({ project }: { project: Project }) {
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-white p-4 rounded-xl border border-charcoal-100">
+    <div className="bg-white p-4 rounded-xl border border-charcoal-100 min-w-0 overflow-hidden">
       <p className="text-sm text-charcoal-500 mb-1">{label}</p>
-      <p className="font-bold text-charcoal-800">{value}</p>
+      <p className="font-bold text-charcoal-800 break-words">{value}</p>
     </div>
   );
 }

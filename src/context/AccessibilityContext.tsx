@@ -41,7 +41,8 @@ function loadSettings(): AccessibilitySettings {
 
 function applySettings(settings: AccessibilitySettings) {
   document.documentElement.style.fontSize = textSizeMap[settings.textSize];
-  document.documentElement.classList.toggle('high-contrast', settings.highContrast);
+  // Apply filter on body, not html — filter on html breaks position:fixed bottom nav on mobile
+  document.body.classList.toggle('high-contrast', settings.highContrast);
 }
 
 export function AccessibilityProvider({ children }: { children: ReactNode }) {

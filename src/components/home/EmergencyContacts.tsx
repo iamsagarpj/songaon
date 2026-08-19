@@ -22,7 +22,7 @@ export function EmergencyContacts({ contacts }: { contacts: EmergencyContact[] }
           <a
             key={contact.id}
             href={`tel:${contact.phone.replace(/\s/g, '')}`}
-            className="flex flex-col items-center gap-2 p-4 bg-red-50 border border-red-100 rounded-xl hover:bg-red-100 transition-colors min-h-[100px] justify-center"
+            className="flex flex-col items-center gap-2 p-4 bg-red-50 border border-red-100 rounded-card-lg hover:bg-red-100 hover:shadow-md active:scale-[0.98] transition-all duration-200 min-h-[100px] justify-center"
           >
             <Icon className="w-8 h-8 text-red-600" aria-hidden="true" />
             <span className="font-semibold text-charcoal-800 text-sm text-center">

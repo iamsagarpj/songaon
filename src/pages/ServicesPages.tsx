@@ -313,8 +313,8 @@ export function NewsPage() {
             <Link key={n.id} to={`/news/${n.slug}`} className="block">
               <Card hover className="flex flex-col sm:flex-row gap-4">
                 <SafeImage src={n.image} alt="" className="w-full sm:w-32 sm:h-32 rounded-lg" wrapperClassName="w-full sm:w-32 sm:h-32 rounded-lg flex-shrink-0" />
-                <div>
-                  <time className="text-sm text-charcoal-400">{formatDate(n.date, language)}</time>
+                <div className="min-w-0">
+                  <time className="text-xs sm:text-sm text-charcoal-400 break-words">{formatDate(n.date, language)}</time>
                   <h3 className="font-bold text-lg mt-1">{getLocalized(n.title, language)}</h3>
                   <p className="text-sm text-charcoal-600 mt-1">{getLocalized(n.summary, language)}</p>
                 </div>
@@ -367,10 +367,10 @@ export function EventsPage() {
       <ServicePage title={language === 'mr' ? 'गावातील आगामी कार्यक्रम' : 'Upcoming Events'}>
         <div className="space-y-4">
           {events.map((e) => (
-            <Card key={e.id}>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                <div className="bg-primary-100 text-primary-800 px-4 py-3 rounded-xl text-center min-w-[100px]">
-                  <p className="font-bold">{formatDate(e.date, language)}</p>
+            <Card key={e.id} className="min-w-0 overflow-hidden">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 min-w-0">
+                <div className="bg-primary-100 text-primary-800 px-4 py-3 rounded-xl text-center sm:min-w-[100px] shrink-0">
+                  <p className="font-bold text-sm sm:text-base break-words">{formatDate(e.date, language)}</p>
                   <p className="text-sm">{e.time}</p>
                 </div>
                 <div>

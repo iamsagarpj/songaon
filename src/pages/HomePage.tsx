@@ -88,10 +88,10 @@ export function HomePage() {
           <div className="bg-amber-50 border-2 border-dashed border-amber-300 rounded-card-lg p-6 md:p-8">
             <div className="space-y-4">
               {announcements.slice(0, 4).map((a) => (
-                <Link key={a.id} to={`/announcements/${a.slug}`} className="block p-4 bg-white rounded-xl hover:shadow-card transition-shadow">
-                  <div className="flex justify-between items-start gap-2">
-                    <h3 className="font-bold text-charcoal-800">{getLocalized(a.title, language)}</h3>
-                    <time className="text-sm text-charcoal-400 whitespace-nowrap">{formatDate(a.date, language)}</time>
+                <Link key={a.id} to={`/announcements/${a.slug}`} className="block p-4 bg-white rounded-xl hover:shadow-card transition-shadow min-w-0 overflow-hidden">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start sm:gap-3 min-w-0">
+                    <h3 className="font-bold text-charcoal-800 break-words min-w-0">{getLocalized(a.title, language)}</h3>
+                    <time className="text-xs sm:text-sm text-charcoal-400 shrink-0">{formatDate(a.date, language)}</time>
                   </div>
                   <p className="text-sm text-charcoal-500 mt-1">{getLocalized(a.description, language)}</p>
                 </Link>
@@ -134,8 +134,8 @@ export function HomePage() {
           <SectionHeader title={t('sections.events')} viewAllLink="/events" />
           <div className="grid md:grid-cols-3 gap-4">
             {events.map((e) => (
-              <Card key={e.id}>
-                <time className="text-sm font-bold text-primary-600">{formatDate(e.date, language)} · {e.time}</time>
+              <Card key={e.id} className="min-w-0 overflow-hidden">
+                <time className="text-xs sm:text-sm font-bold text-primary-600 break-words">{formatDate(e.date, language)} · {e.time}</time>
                 <h3 className="font-bold text-lg mt-2">{getLocalized(e.title, language)}</h3>
                 <p className="text-sm text-charcoal-500 mt-1">{getLocalized(e.location, language)}</p>
               </Card>

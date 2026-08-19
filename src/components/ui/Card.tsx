@@ -13,8 +13,8 @@ export function Card({ children, className, hover = false, padding = 'md', ...pr
   return (
     <div
       className={cn(
-        'bg-white rounded-card border border-charcoal-100 shadow-card',
-        hover && 'hover:shadow-card-hover transition-shadow',
+        'bg-white rounded-card border border-charcoal-100 shadow-card min-w-0 overflow-hidden transition-shadow duration-200',
+        hover && 'hover:shadow-card-hover hover:border-primary-100 active:scale-[0.99]',
         paddingClass,
         className
       )}

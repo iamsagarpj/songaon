@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom';
 import { Type, Contrast, RotateCcw, Languages } from 'lucide-react';
 import { useAccessibility } from '@/context/AccessibilityContext';
 import { useLanguage } from '@/context/LanguageContext';
@@ -8,8 +9,11 @@ export function AccessibilityToolbar() {
   const { language, setLanguage, t } = useLanguage();
   const [open, setOpen] = useState(false);
 
-  return (
-    <div className="fixed bottom-[4.75rem] lg:bottom-6 right-3 sm:right-4 z-50">
+  const toolbar = (
+    <div
+      className="fixed bottom-[calc(7.25rem+env(safe-area-inset-bottom,0px))] lg:bottom-6 right-3 sm:right-4 z-[110]"
+      style={{ transform: 'translateZ(0)' }}
+    >
       {open && (
         <div
           className="mb-2 bg-white rounded-xl shadow-lg border border-charcoal-100 p-2 space-y-1 min-w-[200px]"
@@ -63,6 +67,10 @@ export function AccessibilityToolbar() {
       </button>
     </div>
   );
+
+  if (typeof document === 'undefined') return null;
+
+  return createPortal(toolbar, document.body);
 }
 
 function AccessibilityIcon() {

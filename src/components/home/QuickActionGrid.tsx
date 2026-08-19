@@ -32,9 +32,9 @@ export function QuickActionGrid() {
             <Link
               key={path}
               to={path}
-              className={`flex flex-col items-center gap-3 p-4 md:p-5 rounded-card border border-charcoal-100 hover:shadow-card-hover transition-all bg-white min-h-[112px] sm:min-h-[120px] justify-center touch-target ${tint}`}
+              className={`flex flex-col items-center gap-3 p-4 md:p-5 rounded-card-lg border border-charcoal-100 hover:shadow-card-hover hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 bg-white min-h-[112px] sm:min-h-[120px] justify-center touch-target ${tint}`}
             >
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center shadow-sm ${color}`}>
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center shadow-md ring-1 ring-black/5 ${color}`}>
                 <Icon className="w-6 h-6" aria-hidden="true" />
               </div>
               <span className="text-sm md:text-base font-semibold text-charcoal-700 text-center leading-tight quick-action-label">
