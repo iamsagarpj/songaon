@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Village Info",
+    "schemes": "Schemes",
+    "projects": "Projects",
+    "facilities": "Facilities",
+    "announcements": "Notices",
+    "forms": "Forms",
+    "complaints": "Complaints",
+    "contact": "Contact",
+    "language": "Language",
+    "more": "More"
+  },
+  "hero": {
+    "title": "Sonegaon Tarf Satara — Your Village Digital Gram Panchayat",
+    "subtitle": "Sonegaon Tarf Satara, Satara — village information, government schemes, facilities, notices, projects and citizen services in one place.",
+    "complaint": "Register Complaint",
+    "schemes": "View Government Schemes",
+    "about": "Village Information",
+    "forms": "Download Forms"
+  },
+  "quickActions": {
+    "title": "What do you need?",
+    "about": "Village Info",
+    "announcements": "Notices",
+    "schemes": "Govt Schemes",
+    "projects": "Village Projects",
+    "education": "Education",
+    "employment": "Employment",
+    "water": "Water & Facilities",
+    "forms": "Forms",
+    "complaint": "Register Complaint",
+    "contact": "Contact"
+  },
+  "search": {
+    "placeholder": "Search village information...",
+    "noResults": "Sorry, this information was not found.",
+    "suggestions": "Browse related sections:"
+  },
+  "common": {
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "download": "Download",
+    "share": "Share on WhatsApp",
+    "print": "Print",
+    "call": "Call",
+    "directions": "Get Directions",
+    "loading": "Loading information...",
+    "empty": "No information available at the moment.",
+    "error": "Error loading information. Please try again.",
+    "contactOffice": "Contact the Gram Panchayat office.",
+    "sampleData": "This is sample data. Contact the office for official information.",
+    "lastUpdated": "Last updated",
+    "back": "Go Back",
+    "submit": "Submit",
+    "details": "View Details"
+  },
+  "status": {
+    "new": "New",
+    "important": "Important",
+    "urgent": "Urgent",
+    "planned": "Planned",
+    "ongoing": "Ongoing",
+    "completed": "Completed",
+    "stopped": "Stopped",
+    "registered": "Registered",
+    "investigating": "Under Investigation",
+    "action": "Action Started",
+    "resolved": "Resolved"
+  },
+  "sections": {
+    "announcements": "Important Announcements",
+    "noticeBoard": "Village Notice Board",
+    "villageGlance": "Village at a Glance",
+    "schemes": "Government Schemes",
+    "projects": "Village Development Works",
+    "facilities": "Village Facilities",
+    "events": "Upcoming Events",
+    "news": "Village News",
+    "gallery": "Village Gallery",
+    "emergency": "Emergency Contacts",
+    "map": "Village Map"
+  },
+  "stats": {
+    "population": "Population",
+    "households": "Households",
+    "wards": "Wards",
+    "literacy": "Literacy",
+    "area": "Area",
+    "waterSources": "Water Sources",
+    "schools": "Schools",
+    "anganwadis": "Anganwadis",
+    "healthFacilities": "Health Facilities"
+  },
+  "complaint": {
+    "title": "Register Complaint",
+    "name": "Name",
+    "mobile": "Mobile Number",
+    "category": "Complaint Type",
+    "location": "Complaint Location",
+    "description": "Complaint Description",
+    "photo": "Upload Photo",
+    "success": "Your complaint has been registered successfully.",
+    "number": "Complaint Number",
+    "track": "Track Complaint Status",
+    "trackTitle": "Track Complaint Status",
+    "trackPlaceholder": "Enter complaint number"
+  },
+  "schemeFinder": {
+    "title": "Which scheme is for you?",
+    "whoAreYou": "Who are you?",
+    "whatHelp": "What kind of help do you need?",
+    "results": "Schemes for you"
+  },
+  "footer": {
+    "disclaimer": "This website has been developed to provide information and services to Gram Panchayat citizens.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "accessibility": "Accessibility",
+    "copyright": "All rights reserved"
+  },
+  "accessibility": {
+    "increaseText": "Increase Text Size",
+    "decreaseText": "Decrease Text Size",
+    "highContrast": "High Contrast",
+    "reset": "Reset",
+    "toolbar": "Accessibility Tools"
+  },
+  "bottomNav": {
+    "home": "Home",
+    "services": "Services",
+    "schemes": "Schemes",
+    "complaints": "Complaints",
+    "more": "More"
+  }
+}
